@@ -1,3 +1,4 @@
 :root {
-    --button-background: white;
+    --spinner-height: 20px;
+    --spinner-color: #ddd;
 }

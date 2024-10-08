@@ -5,22 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    </style>
 </head>
 
 <body>
-    <div id="container-1"></div>
-    <div id="container-2"></div>
+    <div id="container">
+        <div id="speed">
+            <label>속도</label>
+        </div>
+        <div id="power">
+            <label>압력</label>
+        </div>
+    </div>
+    <script src="./js/utils.js"></script>
+    <script>
+        (
+            async () => {
+                const speed = document.getElementById('speed')
+                const power = document.getElementById('power')
+        
+                await addTemplate('./templates/spinner.html', speed, () => { registerListener(speed) })
+                await addTemplate('./templates/spinner.html', power, () => { registerListener(power) })
+            }
+        )()
+    </script>
 </body>
-
-<script src="./js/utils.js"></script>
-<script>
-    const container_1 = document.getElementById('container-1')
-    const container_2 = document.getElementById('container-2')
-
-    addTemplate('./template/spinbox.html', container_1, () => registerListener(container_1))
-    addTemplate('./template/spinbox.html', container_2, () => registerListener(container_2))
-</script>
-
 </html>

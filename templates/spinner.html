@@ -1,0 +1,78 @@
+<style>
+    @import '../css/style.css';
+
+    #container {
+        border: 1px solid red;
+    
+        position: absolute;
+    
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        width: 300px;
+        height: 300px;
+    
+        padding: 20px;
+    }
+    
+    #container > * {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .spinner {
+        margin: 10px 0;
+        border: 1px solid var(--spinner-color);
+    
+        width: 80%;
+        height: calc(var(--spinner-height) + 20);
+    
+        display: grid;
+        grid-template-columns: var(--spinner-height) 1fr var(--spinner-height);
+    }
+    
+    .spinner > * {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    .spinner > input[type=number]::-webkit-inner-spin-button {
+        appearance: none;
+    }
+    
+    .spinner > input[type=number] {
+        text-align: center;
+    }
+    
+    .spinner > button {
+        background-color: var(--spinner-color);
+        cursor: pointer;
+    }
+</style>
+
+<template class="template">
+    <div class="spinner">
+        <button class="minus">-</button>
+        <input class="input" type="number" value="77">
+        <button class="plus">+</button>
+    </div>
+</template>
+
+<script>
+    function registerListener(container) {
+        const minus = container.querySelector('.minus')
+        const plus = container.querySelector('.plus')
+        const input = container.querySelector('.input')
+    
+        minus.addEventListener('click', () => {
+            input.value = parseInt(input.value) - 1
+        })
+    
+        plus.addEventListener('click', () => {
+            input.value = parseInt(input.value) + 1
+        })
+    }
+</script>
