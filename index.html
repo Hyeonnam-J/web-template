@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/selector.css">
 </head>
 
 <body>
@@ -16,6 +17,9 @@
         <div id="power">
             <label>압력</label>
         </div>
+        <select id="selector">
+            <option>option-1</option>
+        </select>
     </div>
     <script src="./js/utils.js"></script>
     <script>
@@ -28,6 +32,9 @@
                 await addTemplate('./templates/spinner.html', power, () => { registerListener(power) })
             }
         )()
+
+        const selector = document.getElementById('selector')
+
     </script>
 </body>
 </html>

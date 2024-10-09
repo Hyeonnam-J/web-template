@@ -1,4 +1,6 @@
 :root {
     --spinner-height: 20px;
-    --spinner-color: #ddd;
+    --selector-height: 30px;
+    
+    --settingbox-color: #ddd;
 }

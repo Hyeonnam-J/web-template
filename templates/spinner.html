@@ -2,17 +2,12 @@
     @import '../css/variable.css';
 
     #speed, #power {
-        display: grid;
-        place-items: center;
+        height: var(--spinner-height);
         grid-template-columns: 1fr 2fr;
     }
     
     .spinner {
-        margin: 10px 0;
-        border: 1px solid var(--spinner-color);
-    
-        width: 80%;
-        height: calc(var(--spinner-height) + 20);
+        border: 1px solid var(--settingbox-color);
     
         display: grid;
         grid-template-columns: var(--spinner-height) 1fr var(--spinner-height);
@@ -33,8 +28,7 @@
     }
     
     .spinner > button {
-        background-color: var(--spinner-color);
-        cursor: pointer;
+        background-color: var(--settingbox-color);
     }
 </style>
 

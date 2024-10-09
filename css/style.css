@@ -11,6 +11,10 @@ label {
     place-items: center;
 }
 
+button, select {
+    cursor: pointer;
+}
+
 #container {
     border: 1px solid green;
 
@@ -24,4 +28,10 @@ label {
     height: 300px;
 
     padding: 20px;
+}
+
+#container > * {
+    display: grid;
+    margin: 20px auto;
+    width: 80%;
 }
