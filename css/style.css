@@ -12,7 +12,7 @@ label {
 }
 
 #container {
-    border: 1px solid red;
+    border: 1px solid green;
 
     position: absolute;
 
@@ -25,10 +25,3 @@ label {
 
     padding: 20px;
 }
-
-#container > * {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 2fr;
-}
-
